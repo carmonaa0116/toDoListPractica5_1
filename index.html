@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lista de Tareas</h1>
+
+            <!-- Formulario para agregar tareas -->
+            <form id="formularioEntradaTareas">
+                <input type="text" id="taskInput" placeholder="Añadir una nueva tarea..." required>
+                <div id="divFechaVencimiento">
+                    <img src="img/imagenCalendario.png" alt="imagenCalendario"/>
+                    <input type="date" id="dateInput" style="display:none; position: absolute;">
+                </div>
+                <input type="submit" value="Agregar">
+            </form>
+
+            <!-- Contenedor de tareas pendientes -->
+            <div class="task-container">
+                <h2>Tareas Pendientes</h2>
+                <ul id="listaTareas">
+                    <li id="1">
+                        <input type="checkbox" class="complete-btn">
+                        <p>Tarea de ejemplo</p>
+                        <button class="delete-btn">❌</button>
+                    </li>
+                    <li id="2">
+                        <input type="checkbox" class="complete-btn">
+                        <p>Tarea de ejemplo</p>
+                        <button class="delete-btn">❌</button>
+                    </li>
+                    <li id="3">
+                        <input type="checkbox" class="complete-btn">
+                        <p>Tarea de ejemplo</p>
+                        <button class="delete-btn">❌</button>
+                    </li>
+                </ul>
+                <h2>Tareas Completadas</h2>
+                <ul id="tareasCompletadas">
+                    <!-- Las tareas completadas se irán agregando aquí -->
+                </ul>
+            </div>
+
+            <!-- Contenedor de tareas completadas -->
+        </div>
+
+        <script src="./js/agregarTarea.js" type="module"></script>
+        <script src="./js/actualizarTabla.js" type="module"></script>
+
+
+    </body>
+</html>
